@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/senorshaun/homebridge-radiora2.git"
+    "url": "git://github.com/ryandemo/homebridge-radiora2.git"
   },
-  "author": "SenorShaun",
+  "author": "Ryan Demo",
   "license": "MIT",
   "dependencies": {
     "@homebridge/plugin-ui-utils": "^0.0.19",
