@@ -1,5 +1,5 @@
 # homebridge-radiora2
-Lutron RadioRA2 plugin for homebridge
+Lutron RadioRA2 plugin for Homebridge
 # Installation
 
 1. Install homebridge using: npm install -g homebridge <br>
@@ -10,14 +10,14 @@ Lutron RadioRA2 plugin for homebridge
 
 # Configuration Sample
 
-```
+```json
 "platforms": [
   {
     "name": "RadioRA2",
-    "repeater": "<IP_Address_of_Main_Repeater",
+    "repeater": "<IP_Address_of_Main_Repeater>",
     "username": "<integration_username_you_created>",
     "password": "<integration_username_you_created>",
-    "lights":[
+    "lights": [
       {
         "name": "Main Lights",
         "id": 14,
@@ -26,21 +26,21 @@ Lutron RadioRA2 plugin for homebridge
         "adjustable": true
       },
       {
-        "id": 15,
+        "id": 15
       }
-     ],
-     "fans":[
-       {
-         "id": 18,
-         "adjustable": true,
-         "onvalue": 25
-       }
-      ],
-      "keypads":[
-        {
+    ],
+    "fans": [
+      {
+        "id": 18,
+        "adjustable": true,
+        "onvalue": 25
+      }
+    ],
+    "keypads": [
+      {
         "name": "Phantom Keypad",
         "id": 21,
-        "buttons":[
+        "buttons": [
           {
             "name": "Night Light Levels",
             "id": 1,
@@ -49,7 +49,7 @@ Lutron RadioRA2 plugin for homebridge
         ]
       }
     ],
-    "occupancysensors":[
+    "occupancysensors": [
       {
         "name": "Living Room Occupancy Sensor",
         "id": 6,
@@ -57,36 +57,36 @@ Lutron RadioRA2 plugin for homebridge
         "model": "LRF2-OCR2B-P-WH"
       }
     ],
-    "hvaccontrollers":[
+    "hvaccontrollers": [
       {
         "name": "Living Room Thermostat",
         "id": 36,
         "serial": "0266473A",
         "model": "LR-HWLV-HVAC",
-        "heatOnly": true //this is optional
+        "heatOnly": true
       }
     ],
-        "visorcontrolreceivers":[
+    "visorcontrolreceivers": [
       {
         "name": "Garage Visor Control Receiver",
         "id": 22,
         "serial": "0266473A",
         "model": "RR-VCRX-WH",
-        "buttons":[
+        "buttons": [
           {
             "name": "Garage Lights 100",
             "id": 1,
             "led": 81
           }
         ],
-        "inputs":[
+        "inputs": [
           {
             "name": "Garage Door Closed",
             "id": 3,
             "led": 83
           }
         ],
-        "outputs":[
+        "outputs": [
           {
             "name": "Garage Door Control",
             "id": 5
@@ -128,12 +128,12 @@ Keypads
   - buttons: (required) array group defining the buttons on the keypad exposed to HomeKit
 
 Each button in the array has
-  - id: (required) integration ID of that button
+  - id: (required) component number of that button (e.g. button 1 on the keypad has id `1`)
   - name: (optional) engraving name
   - led: (required) the integration ID of that button used for statusing
-  
-HVAC Controlelrs
- - heatOnly: (optional) will only allow the homekit thermostat to have the Off and Heat modes
+
+HVAC Controllers
+ - heatOnly: (optional) will only allow the HomeKit thermostat to have the Off and Heat modes
 
 # Roadmap
 - Shades eventually
