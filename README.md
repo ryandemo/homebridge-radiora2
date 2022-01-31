@@ -26,14 +26,14 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
 
 ## Configuration Sample
 
-```
+```json
 "platforms": [
   {
     "name": "RadioRA2",
-    "repeater": "<IP_Address_of_Main_Repeater",
+    "repeater": "<IP_Address_of_Main_Repeater>",
     "username": "<integration_username_you_created>",
     "password": "<integration_username_you_created>",
-    "lights":[
+    "lights": [
       {
         "name": "Main Lights",
         "id": 14,
@@ -77,7 +77,7 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
         "exclude": false //
       }
     ],
-    "occupancysensors":[
+    "occupancysensors": [
       {
         "name": "Living Room Occupancy Sensor",
         "id": 6,
@@ -97,7 +97,7 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
         "exlude": false //
       }
     ],
-    "hvaccontrollers":[
+    "hvaccontrollers": [
       {
         "name": "Living Room Thermostat",
         "id": 36,
@@ -118,7 +118,7 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
         "exclude": false //
       }
     ],
-        "visorcontrolreceivers":[
+    "visorcontrolreceivers": [
       {
         "name": "Garage Visor Control Receiver",
         "id": 22,
@@ -132,7 +132,7 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
             "exclude": false //
           }
         ],
-        "inputs":[
+        "inputs": [
           {
             "name": "Garage Door Closed",
             "id": 3,
@@ -140,7 +140,7 @@ Alternatively, you can run an integration report in Lutron to get the ID numbers
             "exclude": false //
           }
         ],
-        "outputs":[
+        "outputs": [
           {
             "name": "Garage Door Control",
             "id": 5,
