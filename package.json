@@ -1,6 +1,6 @@
 {
   "name": "homebridge-radiora2",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Homebridge Platform for Lutron RadioRa2",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/senorshaun/homebridge-radiora2.git"
+    "url": "git://github.com/ryandemo/homebridge-radiora2.git"
   },
-  "author": "SenorShaun",
+  "author": "Ryan Demo",
   "license": "MIT",
   "dependencies": {},
   "engines": {
