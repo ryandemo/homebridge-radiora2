@@ -1,5 +1,5 @@
 {
-  "name": "homebridge-radiora2",
+  "name": "homebridge-radiora2-relay",
   "version": "1.7.7",
   "description": "Homebridge Platform for Lutron RadioRa2",
   "main": "index.js",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/ryandemo/homebridge-radiora2.git"
+    "url": "git://github.com/ryandemo/homebridge-radiora2-relay.git"
   },
   "author": "Ryan Demo",
   "license": "MIT",

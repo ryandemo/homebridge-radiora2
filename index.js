@@ -23,7 +23,7 @@ module.exports = function (homebridge) {
     Service = homebridge.hap.Service;
     UUIDGen = homebridge.hap.uuid;
 
-    homebridge.registerPlatform('homebridge-radiora2', 'RadioRA2', RadioRA2Platform, true);
+    homebridge.registerPlatform('homebridge-radiora2-relay', 'RadioRA2', RadioRA2Platform, true);
 };
     
 function addDefaultValues(deviceConfig, deviceType) {
@@ -81,7 +81,7 @@ class RadioRA2Platform {
                         if (!deviceAccessory) {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
                             let deviceService = accessory.addService(Service.Fan, deviceConfig.name);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new FanAccessory(this.log, deviceConfig, (deviceAccessory instanceof FanAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
@@ -111,7 +111,7 @@ class RadioRA2Platform {
                             if (deviceConfig.adjustable) {
                                 deviceService.addCharacteristic(Characteristic.Brightness);
                             }
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new LightbulbAccessory(this.log, deviceConfig, (deviceAccessory instanceof LightbulbAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
@@ -139,7 +139,7 @@ class RadioRA2Platform {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
                             let deviceService = accessory.addService(Service.OccupancySensor, deviceConfig.name)
                             deviceService.addOptionalCharacteristic(Characteristic.StatusActive);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new OccupancySensorAccessory(this.log, deviceConfig, (deviceAccessory instanceof OccupancySensorAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
@@ -165,7 +165,7 @@ class RadioRA2Platform {
                         let deviceAccessory = this.accessories[uuid];
                         if (!deviceAccessory) {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         if (deviceConfig.stateless) {
@@ -195,7 +195,7 @@ class RadioRA2Platform {
                         let deviceAccessory = this.accessories[uuid];
                         if (!deviceAccessory) {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new VisorControlReceiverAccessory(this.log, deviceConfig, (deviceAccessory instanceof VisorControlReceiverAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
@@ -222,7 +222,7 @@ class RadioRA2Platform {
                         if (!deviceAccessory) {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
                             let deviceService = accessory.addService(Service.Thermostat, deviceConfig.name);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new ThermostatAccessory(this.log, deviceConfig, (deviceAccessory instanceof ThermostatAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
@@ -241,7 +241,7 @@ class RadioRA2Platform {
                                     if (!subdeviceAccessory) {
                                         let subaccessory = new PlatformAccessory(subdeviceConfig.name, subuuid);
                                         let subdeviceService = subaccessory.addService(Service.TemperatureSensor, subdeviceConfig.name);
-                                        that.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [subaccessory]);
+                                        that.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [subaccessory]);
                                         subdeviceAccessory = subaccessory;
                                     }
                                     that.accessories[subuuid] = new TemperatureSensorAccessory(that.log, subdeviceConfig, (subdeviceAccessory instanceof TemperatureSensorAccessory ? subdeviceAccessory.accessory : subdeviceAccessory), that.radiora2, Homebridge);
@@ -276,7 +276,7 @@ class RadioRA2Platform {
                         if (!deviceAccessory) {
                             let accessory = new PlatformAccessory(deviceConfig.name, uuid);
                             let deviceService = accessory.addService(Service.WindowCovering, deviceConfig.name);
-                            this.api.registerPlatformAccessories("homebridge-radiora2", "RadioRA2", [accessory]);
+                            this.api.registerPlatformAccessories("homebridge-radiora2-relay", "RadioRA2", [accessory]);
                             deviceAccessory = accessory;
                         }
                         this.accessories[uuid] = new WindowCoveringAccessory(this.log, deviceConfig, (deviceAccessory instanceof WindowCoveringAccessory ? deviceAccessory.accessory : deviceAccessory), this.radiora2, Homebridge);
